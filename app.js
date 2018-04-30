@@ -7,7 +7,7 @@ var bodyParser = require('body-parser'),
 	passport = require('passport'),
 	passportConfig = require('./config/passport'),
 	passport_mock = require('./passport_mock'),
-	getstream = require('getstream'),
+	stream = require('getstream'),
 	routes = require('./routes');
 
 var app = express();
