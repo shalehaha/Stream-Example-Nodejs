@@ -47,6 +47,17 @@ const token = client.feed('user', name).token
 
 });
 
+app.get('/orderNotificationToken', function(req, res) {
+
+const client = stream.connect('9uw4aec6qkym', 'kexftsstxwf8fjvwfgpnjszz8jvnz338yhtry5jwvbx99as35qugwms5x3nn4f4x', '36857');
+
+    let name = req.query.name;
+const token = client.feed('ordernotification', name).token
+	res.send(JSON.stringify({token:token}));
+
+
+});
+
 app.get('/followUser', function(req, res) {
     console.log(req.body);
     pingpp.charges.create({
